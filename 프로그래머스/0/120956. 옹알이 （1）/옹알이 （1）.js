@@ -27,3 +27,18 @@ function solution(babbling) {
     }
     return answer;
 }
+
+// 정규식 이용.
+// function solution(babbling) {
+//   var answer = 0;
+
+//   // 1) 허용 발음만 연속해서 나오는 문자열 패턴
+//   const regex = /^(aya|ye|woo|ma)+$/;
+
+//   // 2) 배열의 각 단어 검사
+//   babbling.forEach(word => {
+//     if (regex.test(word)) answer++;  
+//   })
+
+//   return answer;
+// }
