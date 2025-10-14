@@ -27,9 +27,9 @@ function solution(id_list, report, k) {
     }
     
     //5. 각 유저가 받은 메일 수 계산
-    const result = id_list.map(id => {
-        const reportedUsers = reportMap.get(id);
-        return reportedUsers.filter(u => banned.has(u)).length;
+    const result = id_list.map(id => { //전체id
+        const reportedUsers = reportMap.get(id); //신고받은사람들
+        return reportedUsers.filter(u => banned.has(u)).length; //정지당한사람저장
     });
     
     return result;
